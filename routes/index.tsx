@@ -1,17 +1,20 @@
 /** @jsx h */
-import { h } from "$fresh/runtime.ts";
-import Counter from "../islands/Counter.tsx";
+import { h } from '$fresh/runtime.ts'
+import Counter from '../islands/Counter.tsx'
+import InitStyles from '../islands/InitStyles.tsx'
 
-export default function Home() {
+const Home = () => {
   return (
     <div style="display: flex; flex-direction: column; align-items: center;">
       <a href="/about">About</a>
-      <img src="/logo.svg" height="100px" alt="the fresh logo: a sliced lemon dripping with juice" />
       <p>
         Welcome to `fresh`. Try update this message in the ./routes/index.tsx
         file, and refresh.
       </p>
       <Counter start={3} />
+      <InitStyles />
     </div>
-  );
+  )
 }
+
+export default Home
