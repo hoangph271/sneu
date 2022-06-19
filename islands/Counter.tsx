@@ -1,21 +1,24 @@
 /** @jsx h */
-import { h, IS_BROWSER, useState } from "$fresh/runtime.ts";
+import { h, IS_BROWSER, useState } from '$fresh/runtime.ts'
 
 interface CounterProps {
-  start: number;
+  start: number
 }
 
-export default function Counter(props: CounterProps) {
-  const [count, setCount] = useState(props.start);
+export default function Counter ({ start }: CounterProps) {
+  const [count, setCount] = useState(start)
+
   return (
-    <div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
       <p>{count}</p>
-      <button onClick={() => setCount(count - 1)} disabled={!IS_BROWSER}>
-        -1
-      </button>
-      <button onClick={() => setCount(count + 1)} disabled={!IS_BROWSER}>
-        +1
-      </button>
+      <div>
+        <button onClick={() => setCount(count - 1)} disabled={!IS_BROWSER}>
+          -1
+        </button>
+        <button onClick={() => setCount(count + 1)} disabled={!IS_BROWSER}>
+          +1
+        </button>
+      </div>
     </div>
-  );
+  )
 }

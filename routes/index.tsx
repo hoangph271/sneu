@@ -4,7 +4,8 @@ import Counter from "../islands/Counter.tsx";
 
 export default function Home() {
   return (
-    <div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <a href="/about">About</a>
       <img src="/logo.svg" height="100px" alt="the fresh logo: a sliced lemon dripping with juice" />
       <p>
         Welcome to `fresh`. Try update this message in the ./routes/index.tsx
